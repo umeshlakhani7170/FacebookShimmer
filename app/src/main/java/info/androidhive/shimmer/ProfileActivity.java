@@ -22,12 +22,12 @@ public class ProfileActivity extends AppCompatActivity {
     @Override
     public void onResume() {
         super.onResume();
-        mShimmerViewContainer.startShimmerAnimation();
+        mShimmerViewContainer.startShimmer();
     }
 
     @Override
     public void onPause() {
-        mShimmerViewContainer.stopShimmerAnimation();
+        mShimmerViewContainer.stopShimmer();
         super.onPause();
     }
 

@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
                         mAdapter.notifyDataSetChanged();
 
                         // stop animating Shimmer and hide the layout
-                        mShimmerViewContainer.stopShimmerAnimation();
+                        mShimmerViewContainer.stopShimmer();
                         mShimmerViewContainer.setVisibility(View.GONE);
                     }
                 }, new Response.ErrorListener() {
@@ -102,12 +102,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onResume() {
         super.onResume();
-        mShimmerViewContainer.startShimmerAnimation();
+        mShimmerViewContainer.startShimmer();
     }
 
     @Override
     public void onPause() {
-        mShimmerViewContainer.stopShimmerAnimation();
+        mShimmerViewContainer.stopShimmer();
         super.onPause();
     }
 
