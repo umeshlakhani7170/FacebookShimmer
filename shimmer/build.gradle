@@ -1,0 +1,27 @@
+/*
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+apply plugin: 'com.android.library'
+
+android {
+  compileSdk COMPILE_SDK_VERSION as int
+
+  defaultConfig {
+    minSdk MIN_SDK_VERSION as int
+    targetSdk TARGET_SDK_VERSION as int
+  }
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_17
+    targetCompatibility JavaVersion.VERSION_17
+  }
+  namespace 'com.facebook.shimmer'
+}
+
+dependencies {
+  implementation 'androidx.annotation:annotation:1.8.2'
+}
